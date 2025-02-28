@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: black;
+    color: white;
+}
+
+.logo {
+        font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: white; /* Logo color */
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.navbar ul li a.active {
+    color: red;
+    font-weight: 600;
+}
+
+
+
+.about-section {
+    min-height: 100vh; /* Makes it take the full screen height */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    padding: 100px 50px; /* Adds space around the content */
+}
+
+
+.about-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust height as needed */
+    background: black; /* Set background color to black */
+    color: white;
+    width: 2000px;
+}
+.about-title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(255, 244, 244, 0.966);
+    position: relative;
+    text-transform: uppercase;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.profile-image {
+    width: 250px;
+    height: auto;
+    border-radius: 200px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.text-content h2 span {
+    color: black;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+.about-title::after {
+    content: "ABOUT ME"; /* Background faded text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px; /* Large text */
+    color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+    font-weight: bolder;
+    text-transform: uppercase;
+    z-index: 1; /* Behind the main title */
+    white-space: nowrap;
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style for the 'More About Me' button */
+.scroll-link {
+    display: inline-block;
+    margin-top: -10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: rgb(187, 48, 48);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.my-goal-section {  /* Change this to the actual class of the section */
+    max-width: 100%;  /* Ensures it spans the full width */
+    padding: 40px 20px; /* Adjusts spacing inside the section */
+    min-height: 300px; /* Sets a minimum height */
+    display: flex;
+    align-items: center; /* Aligns text vertically */
+    justify-content: center; /* Centers content horizontally */
+    
+}
+
+.my-goal-section {
+    margin-bottom: 0; /* Remove extra space */
+}
+
+
+.scroll-link:hover {
+    background-color: #333;
+}
+
+/* Styling the More About Me section */
+.more-about-section {
+    margin-top: 50px;
+    padding: 50px;
+    background: #f5f5f5;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.more-about-content {
+    display: flex; /* Places image and text in a row */
+    align-items: left; /* Aligns items vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+    gap: 15px; /* Space between image and text */
+    max-width: 350%; /* Ensures it takes full width */
+    background-color: black;
+    color: #f5f5f5;
+    padding: 250px;
+    font-size: 30px;
+    min-height: 100vh;
+}
+
+.more-about-image {
+    width: 500px; /* Adjust image size */
+    border-radius: 100px; /* Optional: Rounded corners */
+    flex-shrink: 0; /* Prevents image from shrinking */
+    margin-left: 0; /* Ensures it sticks to the left */
+    display: block;
+    transition: transform 0.6s ease-in-out;
+
+}
+.more-about-image:hover {
+        transform: rotateY(180deg);
+    }
+
+    @keyframes flip {
+        0% { transform: rotateY(0deg); }
+        50% { transform: rotateY(180deg); }
+        100% { transform: rotateY(360deg); }
+    }
+    
+    .more-about-image {
+        animation: flip 3s infinite linear;
+    }
+    
+
+
+.more-about-text {
+    max-width: 500px; /* Limits text width */
+    font-size: 16px; /* Adjust font size */
+    text-align: left; /* Align text to the left */
+}
+
+#about-section {
+    scroll-margin-top: 80px; /* Adjust this based on your navbar height */
+}
+
+.animated-text {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Moves text down */
+    animation: fadeInUp 2s ease-in-out forwards;
+    animation-delay: 1s; /* Waits 1 second before animating */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.off-screen-menu {
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: 3s ease;
+
+}
+
+
+.off-screen-menu.active{
+    right: 0;
+
+     
+}
+/* Hamburger Icon */
+.ham-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 101; /* Make sure it is above other content */
+}
+.ham-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Off-Screen Menu */
+.off-screen-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Hidden by default */
+    width: 200px;
+    height: 100vh;
+    background: black;
+    padding: 100px 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+}
+
+/* Show Menu When Active */
+.off-screen-menu.active {
+    right: 0;
+}
+
+/* Fix List Styling */
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;  /* Moves the whole menu down or up */
+    text-align: left;
+}
+
+.off-screen-menu ul li {
+    padding: 15px 0;  /* Adjusts spacing between each item */
+}
+
+.off-screen-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Prevent Content Shift */
+body.menu-open {
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Keeps space between the two sections */
+    align-items: flex-start; /* Aligns items at the top */
+    max-width: 100px;
+    margin: auto;
+    gap: 40px; /* Adds space between the sections */
+    min-height: 100vh;
+    background-color: gray;
+}
+
+
+.contact-form {
+    flex: 1;
+    max-width: 20%;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #444444;
+    margin: 8px 0;
+}
+
+.contact-info p i {
+    color: #000000;  /* Orange color */
+    margin-right: 8px;
+    font-size: 18px;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #080807;
+    font-weight: bold;
+}
+.contact-info a:hover {
+    color:#f8d573;
+}
+
+
+/* Form Styling */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #11110e;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.contact-form button:hover {
+    background-color: #f8d573;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack them on top of each other */
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+textarea {
+    resize: none;
+  }
